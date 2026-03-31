@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"libs/filter.js -> isotope-layout":{"id":53847,"files":["static/chunks/3847.9752c9c426f08908.js"]}}';
