@@ -50,12 +50,20 @@ const handleSubmit = async () => {
     }
   } catch (error) {
     console.error("Login error:", error);
-    const msg =
-      error?.status ||
-      error?.response?.data?.status ||
-      error?.response?.data?.message ||
-      error?.message ||
-      "Network error. Please check your connection and try again.";
+    let msg = "Network error. Please check your connection and try again.";
+    
+    if (error?.code === 'ECONNABORTED' && error?.message?.includes('timeout')) {
+      msg = "Server is taking longer than expected. The backend may be starting up. Please wait a moment and try again.";
+    } else if (error?.response?.data?.status) {
+      msg = error.response.data.status;
+    } else if (error?.response?.data?.message) {
+      msg = error.response.data.message;
+    } else if (error?.status) {
+      msg = error.status;
+    } else if (error?.message) {
+      msg = error.message;
+    }
+    
     setError(msg);
   } finally {
     setLoading(false);

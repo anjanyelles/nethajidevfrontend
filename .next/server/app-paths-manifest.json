@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dashboards/admin-students/page": "app/dashboards/admin-students/page.js",
+  "/login/page": "app/login/page.js",
+  "/dashboards/admin-staff/page": "app/dashboards/admin-staff/page.js",
+  "/dashboards/admin-bulk-messaging/page": "app/dashboards/admin-bulk-messaging/page.js",
+  "/dashboards/admin-dashboard/page": "app/dashboards/admin-dashboard/page.js",
+  "/icon.ico/route": "app/icon.ico/route.js",
+  "/dashboards/admin-attendance/page": "app/dashboards/admin-attendance/page.js"
+}
